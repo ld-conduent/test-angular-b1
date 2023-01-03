@@ -3,8 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <app-hero-list></app-hero-list>
-    <app-sales-tax></app-sales-tax>
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-6">
+        <app-hero-list></app-hero-list>
+      </div>
+      <div class="col-6">
+        <app-sales-tax></app-sales-tax>
+        </div>
+      </div>
+  </div>
   `
 })
 export class AppComponent { }
