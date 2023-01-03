@@ -5,10 +5,9 @@ import { TaxRateService } from './tax-rate.service';
 
 @Component({
   selector: 'app-sales-tax',
-  /*
   templateUrl: './sales-tax.component.html',
-  */
 
+  /*
   template: `
     <h2>Sales Tax Calculator</h2>
     <label>Amount: <input #amountBox (change)="0"></label>
@@ -17,7 +16,7 @@ import { TaxRateService } from './tax-rate.service';
      {{ getTax(amountBox.value) | currency:'Q. ':true:'1.2-2' }}
     </div>
   `,
-
+  */
   providers: [SalesTaxService, TaxRateService],
 })
 export class SalesTaxComponent {
