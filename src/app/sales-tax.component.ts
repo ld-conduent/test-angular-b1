@@ -11,7 +11,7 @@ import { TaxRateService } from './tax-rate.service';
 
     <div *ngIf="amountBox.value">
     The sales tax is
-     {{ getTax(amountBox.value) | currency:'USD':true:'1.2-2' }}
+     {{ getTax(amountBox.value) | currency:'GTQ':true:'1.2-2' }}
     </div>
   `,
   providers: [SalesTaxService, TaxRateService]
