@@ -1,0 +1,7 @@
+<h2>Sales Tax Calculator</h2>
+<label>Amount: <input [(ngModel)]="amountBox" /></label>
+
+<div *ngIf="amountBox">
+  The sales tax is
+  {{ getTax(amountBox) | currency: 'Q. ':true:'1.2-2' }}
+</div>
