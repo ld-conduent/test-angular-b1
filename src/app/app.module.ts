@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail.component';
-import { HeroListComponent } from './hero-list.component';
+import { HeroListComponent } from './hero-list/hero-list.component';
 import { SalesTaxComponent } from './sales-tax.component';
 import { ColorChangeComponent } from './color-change/color-change.component';
 import { HeroService } from './hero.service';

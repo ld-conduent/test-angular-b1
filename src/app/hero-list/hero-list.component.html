@@ -1,14 +1,20 @@
-<h2>Hero List</h2>
+<h2 i18n="site header|An introduction header for this sample">Hero List</h2>
+
+<span i18n
+  >Updated {minutes, plural, =0 {just now} =1 {1 minute ago} other
+  {{{minutes}} minutes ago}}</span
+>
+
+<p></p>
 
 <p><i>Pick a hero from the list</i></p>
 <ul>
   <li *ngFor="let hero of heroes" (click)="selectHero(hero)">
-    {{hero.name}}
+    {{ hero.name }}
   </li>
 </ul>
 
 <app-hero-detail *ngIf="selectedHero" [hero]="selectedHero"></app-hero-detail>
-
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
