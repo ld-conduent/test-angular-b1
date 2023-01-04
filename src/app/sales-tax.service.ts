@@ -4,15 +4,21 @@ import { TaxRateService } from './tax-rate.service';
 
 @Injectable()
 export class SalesTaxService {
-  constructor(private rateService: TaxRateService) { }
+  constructor(private rateService: TaxRateService) {}
 
-  getVAT(value: string | number) {
-    const amount = (typeof value === 'string') ?
-      parseFloat(value) : value;
-    return (amount || 0) * this.rateService.getRate('VAT');
+  getVAT(value: string | number, included: boolean = false) {
+    const amount = typeof value === 'string' ? parseFloat(value) : value;
+    var mount: number = 0;
+
+    if (included) {
+      mount = (amount || 0) / (1 + this.rateService.getRate('VAT-GT'));
+    } else {
+      mount = (amount || 0) * this.rateService.getRate('VAT-GT');
+    }
+
+    return mount;
   }
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.

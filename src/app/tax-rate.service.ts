@@ -2,9 +2,21 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class TaxRateService {
-  getRate(rateName: string) { return 0.10; } // 10% everywhere
+  getRate(rateName: string) {
+    switch (rateName) {
+      case 'VAT-TN':
+        return 0.0975;
+      case 'VAT-FL':
+        return 0.075;
+      case 'VAT-OR':
+        return 0;
+      case 'VAT-GT':
+        return 0.12;
+      default:
+        return 0.1;
+    }
+  }
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
